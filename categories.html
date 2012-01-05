@@ -1,0 +1,22 @@
+---
+layout: page
+title: Categories
+header: Posts By Category
+---
+
+<ul class="tag_box">
+	{% assign categories_list = site.categories %}
+	{% include categories_list.html %}
+</ul>
+
+
+{% for category in site.categories %}
+	<article class="post">
+		<h2 id="{{ category[0] }}-ref">{{ category[0] | join: "/" }}</h2>
+		<ul>
+			{% assign pages_list = category[1] %}  
+			{% include pages_list.html %}
+		</ul>
+	</article>
+{% endfor %}
+

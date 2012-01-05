@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+	<meta name="keywords" content="">
+	<meta name="description" content="Where the thoughts of James Fleeting come to die.">
+	<!-- iPhone -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<!-- /iPhone -->
+	<!-- IE -->
+	<meta name="application-name" content="PaperKilledRock">
+	<meta name="msapplication-tooltip" content="Where the thoughts of James Fleeting come to die.">
+	<meta name="msapplication-starturl" content="/?iePinned=true">
+	<!-- /IE -->
+	<!-- Facebook -->
+	<meta property="og:title" content="PaperKilledRock">
+	<meta property="og:description" content="Where the thoughts of James Fleeting come to die.">
+	<meta property="og:image" content="">
+	<!-- /Facebook -->
+	
+	<title>{{ page.title }} | paperkilledrock.com</title>
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	<link rel="author" href="/humans.txt">
+	<link rel="dns-prefetch" href="//ajax.googleapis.com">
+	<link rel="sitemap" href="/sitemap.xml" type="application/xml" title="Sitemap">
+	<link rel="alternate" type="application/rss+xml" title="Post Feed" href="http://feeds.feedburner.com/paperkilledrock">
+	<link rel="alternate" type="application/rss+xml" title="Fleeting's Tumblr Feed" href="http://feeds.feedburner.com/FleetingFTW">
+	<link rel="shortlink" href="http://fleeting.us/">
+	
+	<link href='http://fonts.googleapis.com/css?family=IM+Fell+French+Canon&v2' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="/css/style.css?v=1" type="text/css">
+	
+	<script src="/js/modernizr-2.0.6.min.js"></script>
+</head>
+<body>
+	<i class="frame" id="left-frame"></i>
+	<i class="frame" id="right-frame"></i>
+	<header role="banner">
+		<hgroup>
+			<h1><a href="/" title="paperkilledrock.com">paperkilledrock</a></h1>
+			<h2>James Fleeting: a web designer and developer</h2>
+		</hgroup>
+
+		<nav role="navigation">
+			<ul>
+				{% for link in site.navigation %}
+					<li{% if page.title == link.text %} class="current"{% endif %}><a href="{{ link.url }}">{{ link.text }}</a></li>
+				{% endfor %}
+			</ul>
+		</nav>
+	</header>
+
+	<div class="hero">
+		<p>A former masked super hero who now devotes<br />most of his time to twitter and tumblr.</p>
+		<!--<p>A Web Designer &amp; Developer in Wichita Falls, TX.<br />
+			Making awesome happen every day since 1985.</p>-->
+	</div>
+
+	<div class="main" role="main">
+		{{ content }}
+	</div>
+	
+	<aside role="complementary">
+		<ul class="social">
+			<li><a href="http://feeds.feedburner.com/paperkilledrock" title="Subscribe to RSS"><img src="/images/icons/rss_32.png" alt="rss feed"></a></li>
+			<li><a href="http://twitter.com/twofivethreetwo" title="@twofivethreetwo on twitter"><img src="/images/icons/twitter_32.png" alt="twitter profile"></a></li>
+			<li><a href="https://plus.google.com/113054978318615255520/" title="Google+ Profile"><img src="/images/icons/googleplus_32.png" alt="google+ profile"></a></li>
+			<li><a href="http://github.com/jamesfleeting" title="GitHub Repos"><img src="/images/icons/github_32.png" alt="github profile"></a></li>
+			<li><a href="http://fleetingftw.com/" title="Tumblr Posts"><img src="/images/icons/tumblr_32.png" alt="tumblr blog"></a></li>
+			<li><a href="http://www.flickr.com/photos/twofivethreetwo/" title="twofivethreetwo on flickr"><img src="/images/icons/flickr_32.png" alt="flickr stream"></a></li>
+			<li><a href="http://pinboard.in/u:fleeting" title="Pinboard Bookmarks"><img src="/images/icons/pinboard_32.png" alt="pinboard profile"></a></li>
+			<li><a href="http://www.last.fm/user/freak2532" title="Last.fm Profile"><img src="/images/icons/lastfm_32.png" alt="last.fm profile"></a></li>
+			<li><a href="http://forr.st/-fleeting" title="Forrst Profile"><img src="/images/icons/forrst_32.png" alt="forrst profile"></a></li>
+			<li><a href="http://www.google.com/profiles/twofivethreetwo" title="Google Profile"><img src="/images/icons/google_32.png" alt="google profile"></a></li>
+		</ul>
+		
+		<p>I'm <a href="/about/" title="About James Fleeting">James Fleeting</a>, a web designer and developer in Wichita Falls, Texas. I specialize in front-end development with a passion for HTML and CSS. My obsession for the future of the web pushes me to never stop learning and this blog is where I share that information. You can also find me on <a href="http://twitter.com/twofivethreetwo" title="@twofivethreetwo">twitter</a> where I post mostly what I'm eating or listening to. When I'm not working, I can be found playing video games, watching movies or spending time with my wife and kids.</p>
+		
+		<h2>Projects</h2>
+		<ul>
+			<li><a href="http://github.com/jamesfleeting/drought" title="Drought">Drought</a>: Another boilerplate is exactly what the web needs. This is what I've found works for me right now.</li>
+			<li><a href="http://simpleweather.monkeecreate.com/" title="simpleWeather">simpleWeather</a>: jQuery plugin that uses the Yahoo! weather api to display the current weather.</li>
+			<li><a href="https://chrome.google.com/webstore/detail/nmnkdhjpjhggaaicdmafongigfhogcml" title="Last.fm New Releases">Last.fm New Releases</a>: Chrome Extension that displays the new releases from your favorite artists as pulled from last.fm</li>
+			<li><a href="http://simplelastfm.monkeecreate.com/" title="simpleLastFM">simpleLastFM</a>: jQuery plugin that displays what your listening to, top artists, albums and more from your last.fm profile.</li>
+			<li><a href="https://chrome.google.com/webstore/detail/okinfleapclnkoofmggdgedeijldgenp" title="Gowalla Friends Feed">Gowalla Friends Feed</a>: Chrome Extension that makes it easier to stalk your friends via Gowalla. Includes badge alert and desktop notifications of friends checkins.</li>
+			<li><a href="http://sevenpl.us/" title="Seven+">Seven+</a>: A web app for creating and studying your own flash cards.</li>
+			<li><a href="http://threee.monkeecreate.com" title="Threee">Threee</a>: A daily photo project. Three people taking a photo every day with their iPhone.</li>
+			<li>Find more projects at <a href="http://monkeecreate.com/" title="monkeeCreate">monkeeCreate</a> or my <a href="https://github.com/jamesfleeting" title="Github">github</a></li>
+		</ul>
+		
+		<h2>Recent Bookmarks</h2>
+		<script language="javascript" src="http://pinboard.in//widgets/v1/linkroll/?user=fleeting&count=4"></script>
+		<p class="right"><a href="http://pinboard.in/u:fleeting" title="fleeting's pinboard">Check out my pinboard!</a></p>
+	</aside> 
+	
+	<footer role="contentinfo">
+		<p class="left">&copy; Copyright 2012 James Fleeting, paperkilledrock.com, All Rights Reserved.</p>
+		<p class="right">Check out my <a href="http://jamesfleeting.com" title="James Fleeting">vCard</a> to find me elsewhere.</p>
+	</footer>
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+	<script>!window.jQuery && document.write('<script src="/js/jquery-1.7.1.min.js"><\/script>')</script>
+	<script src="/js/common.js"></script>
+	<script src="/js/adapt.min.js"></script>
+		
+	<script>
+	window._gaq = [['_setAccount','UA-1574394-12'],['_trackPageview'],['_trackPageLoadTime']];
+	Modernizr.load({
+		load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+	});
+	</script>
+	<!--[if lt IE 7 ]>
+		<script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+		<script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+	<![endif]-->
+</body>
+</html>

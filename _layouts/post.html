@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<article class="post" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+	{% if page.type == "linked" %}
+	<header>
+		<span title="This post links to an outside website. Clicking the title will result in you visiting said website." class="linked">Linked</span>
+		<h2 itemprop="name"><a href="{{ page.post-link }}" title="{{ page.title }}">{{ page.title }}</a></h2> 
+		<small class="meta"> 
+			<time datetime="{{ page.date }}" title="{{ page.date | date_to_string }}" pubdate>{{ page.date | date_to_string }}</time> 
+		</small>
+	</header>
+	{% else %}
+	<header>
+		<h2 itemprop="name"><a href="{{ page.url }}" rel="bookmark" title="Permanent Link to {{ page.title }}">{{ page.title }}</a></h2> 
+		<small class="meta"> 
+			<time datetime="{{ page.date }}" title="{{ page.date | date_to_string }}" pubdate>{{ page.date | date_to_string }}</time> 
+			| <a href="#comments">0 Responses</a>
+			{% if page.short-url != nil %}| <a href="{{ page.short-url }}" title"Short link for {{ page.title }}">{{ page.short-url }}</a>{% endif %}
+			<a href="/about.html" class="vcard visuallyHidden" rel="author"><span itemprop="author" class="fn">James Fleeting</span></a> 
+		</small>
+	</header>
+	{% endif %}
+	
+	<div class="post-text" itemprop="articleBody">
+		{{ page.content }}
+	</div>
+	
+	{% if page.tags != empty %}
+	<footer>
+		<small class="left">In {% for tag in page.tags %}<a href="{{ site.var.tags_path }}#{{ tag }}-ref" title="Posts tagged with {{ tag }}" rel="tag">{{ tag }}</a>{% if forloop.last %}{% else %}, {% endif %}{% endfor %}</small>
+		<small class="right"><a href="#comments">Leave a Comment</a></small>
+	</footer>
+	{% endif %}
+</article>

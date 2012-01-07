@@ -109,6 +109,16 @@
 	<script>!window.jQuery && document.write('<script src="/js/jquery-1.7.1.min.js"><\/script>')</script>
 	<script src="/js/common.js"></script>
 	<script src="/js/adapt.min.js"></script>
+	
+	{% if page.code != null %}
+		<link rel="stylesheet" href="/js/SyntaxHighlighter/shCoreDefault.css?v=1" type="text/css">
+		<script src="/js/SyntaxHighlighter/XRegExp.js"></script>
+		<script src="/js/SyntaxHighlighter/shCore.js"></script>
+		{% for code in page.code %}
+			<script src="/js/SyntaxHighlighter/shBrush{{ code }}.js"></script>
+		{% endfor %}
+		<script>SyntaxHighlighter.all();</script>
+	{% endif %}
 		
 	<script>
 	window._gaq = [['_setAccount','UA-1574394-12'],['_trackPageview'],['_trackPageLoadTime']];

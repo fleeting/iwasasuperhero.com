@@ -223,7 +223,7 @@ nav ul li a:hover, nav ul li.current a {
 	}
 }
 
-.hero p {
+.home .hero p {
 	-webkit-animation-name: slideDown;
 	-webkit-animation-duration: 1s;
 	-webkit-animation-iteration-count: 1;

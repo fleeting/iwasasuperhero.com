@@ -40,7 +40,7 @@
 	
 	<script src="/js/modernizr-2.0.6.min.js"></script>
 </head>
-<body>
+<body{% if page.title == 'Blog' %} class="home"{% endif %}>
 	<i class="frame" id="left-frame"></i>
 	<i class="frame" id="right-frame"></i>
 	<header role="banner">

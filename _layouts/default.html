@@ -36,6 +36,7 @@
 	
 	<link href='http://fonts.googleapis.com/css?family=IM+Fell+French+Canon&v2' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="/css/style.css?v=1" type="text/css">
+	<link rel="stylesheet" href="/css/syntax.css?v=1" type="text/css">
 	
 	<script src="/js/modernizr-2.0.6.min.js"></script>
 </head>
@@ -110,16 +111,6 @@
 	<script src="/js/common.js"></script>
 	<script src="/js/adapt.min.js"></script>
 	
-	{% if page.code != null %}
-		<link rel="stylesheet" href="/js/SyntaxHighlighter/shCoreDefault.css?v=1" type="text/css">
-		<script src="/js/SyntaxHighlighter/XRegExp.js"></script>
-		<script src="/js/SyntaxHighlighter/shCore.js"></script>
-		{% for code in page.code %}
-			<script src="/js/SyntaxHighlighter/shBrush{{ code }}.js"></script>
-		{% endfor %}
-		<script>SyntaxHighlighter.all();</script>
-	{% endif %}
-		
 	<script>
 	window._gaq = [['_setAccount','UA-1574394-12'],['_trackPageview'],['_trackPageLoadTime']];
 	Modernizr.load({

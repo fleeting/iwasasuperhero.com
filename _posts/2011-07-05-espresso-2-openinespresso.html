@@ -7,12 +7,16 @@ code: [Bash]
 
 <p>There are two things in my TextMate workflow that I require with Espresso. This includes opening a file in Espresso from Terminal (quickly running `mate .gitignore` is handy) and a Finder droplet that lets me open the current window or selected file/folder in TextMate. Both of these are easy to handle. To open a file in Espresso from Terminal you need to add a new alias to your .bash_profile. In Terminal do the following:</p>
 
-<pre class="brush: bash">cd ~
-open -e .bash_profile</pre>
+{% highlight bash %}
+cd ~
+open -e .bash_profile
+{% endhighlight %}
 
 <p>Add the following line to the file:</p>
 
-<pre class="brush: bash">alias esp="open -a Espresso"</pre>
+{% highlight bash %}
+alias esp="open -a Espresso"
+{% endhighlight %}
 
 <p>This of course requires you to reopen your terminal. Now running `esp someFile.txt` will open t hat file or folder in Espresso. Comes in very handy.</p>
 

@@ -2,14 +2,13 @@
 layout: page
 title: Tags
 header: Posts By Tag
-group: example-page
+changefreq: always
 ---
 	
 <ul class="tag_box">
 	{% assign tags_list = site.tags %}  
 	{% include tags_list.html %}
 </ul>
-
 
 {% for tag in site.tags %} 
 	<article class="post">

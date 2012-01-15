@@ -1,0 +1,22 @@
+[role="banner"] {
+	text-align: center;
+}
+
+[role="banner"] hgroup {
+	float: none;
+}
+
+[role="banner"] nav {
+	float: none;
+	margin-top: 20px;
+}
+
+[role="main"], [role="complementary"] {
+	float: none;
+	width: 100%;
+	margin-top: 45px;
+}
+
+.hero {
+	display: none;
+}

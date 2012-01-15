@@ -112,6 +112,18 @@
 	<script src="/js/adapt.min.js"></script>
 	
 	<script>
+	    var disqus_shortname = 'iwasasuperhero';
+	    var disqus_developer = 1; // DEV ONLY - REMOVE!
+	    
+	    (function () {
+	        var s = document.createElement('script'); s.async = true;
+	        s.type = 'text/javascript';
+	        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+	        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+	    }());
+	</script>
+	
+	<script>
 	window._gaq = [['_setAccount','UA-1574394-12'],['_trackPageview'],['_trackPageLoadTime']];
 	Modernizr.load({
 		load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'

@@ -16,7 +16,7 @@ layout: default
 		<h2 itemprop="name"><a href="{{ page.url }}" rel="bookmark" title="Permanent Link to {{ page.title }}">{{ page.title }}</a></h2> 
 		<small class="meta"> 
 			<time datetime="{{ page.date }}" title="{{ page.date | date_to_string }}" pubdate>{{ page.date | date_to_string }}</time> 
-			| <a href="#comments">0 Responses</a>
+			| <a href="{{ page.url }}#disqus_thread"></a>
 			{% if page.short-url != nil %}| <a href="{{ page.short-url }}" title"Short link for {{ page.title }}">{{ page.short-url }}</a>{% endif %}
 			<a href="/about.html" class="vcard visuallyHidden" rel="author"><span itemprop="author" class="fn">James Fleeting</span></a> 
 		</small>
@@ -24,7 +24,7 @@ layout: default
 	{% endif %}
 	
 	<div class="post-text" itemprop="articleBody">
-		{{ page.content }}
+		{{ content }}
 	</div>
 	
 	{% if page.tags != empty %}
@@ -37,8 +37,8 @@ layout: default
 
 <div id="disqus_thread"></div>
 <script>
-    var disqus_shortname = 'iwasasuperhero';
-    var disqus_developer = 1; // DEV ONLY - REMOVE!
+	var disqus_shortname = 'iwasasuperhero';
+	var disqus_developer = 1; // DEV ONLY - REMOVE!
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

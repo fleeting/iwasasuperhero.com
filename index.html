@@ -20,7 +20,7 @@ title: Blog
 			<h2 itemprop="name"><a href="{{ post.url }}" rel="bookmark" title="Permanent Link to {{ post.title }}">{{ post.title }}</a></h2> 
 			<small class="meta"> 
 				<time datetime="{{ post.date }}" title="{{ post.date | date_to_string }}" pubdate>{{ post.date | date_to_string }}</time> 
-				| <a href="{{ post.url }}#comments">0 Responses</a>
+				| <a href="{{ post.url }}#disqus_thread"></a>
 				{% if post.short-url != nil %}| <a href="{{ post.short-url }}" title"Short link for {{ post.title }}">{{ post.short-url }}</a>{% endif %}
 				<a href="/about.html" class="vcard visuallyHidden" rel="author"><span itemprop="author" class="fn">James Fleeting</span></a> 
 			</small>

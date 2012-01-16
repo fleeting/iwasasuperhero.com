@@ -24,7 +24,7 @@
 	<meta property="og:image" content="">
 	<!-- /Facebook -->
 	
-	<title>{{ page.title }} | iwasasuperhero.com</title>
+	<title>{% if page.title == 'Blog' %}The thoughts of James Fleeting{% else %}{{ page.title }}{% endif %} | iwasasuperhero.com</title>
 	
 	<link rel="shortcut icon" href="/favicon.ico">
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png">

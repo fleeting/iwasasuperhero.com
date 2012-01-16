@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-      <loc>/about.html</loc>
+      <loc>http://iwasasuperhero.com/about.html</loc>
       <lastmod>2012-01-15</lastmod>
       <changefreq>yearly</changefreq>
   </url>
   <url>
-      <loc>/archive.html</loc>
+      <loc>http://iwasasuperhero.com/archive.html</loc>
       <lastmod>2012-01-15</lastmod>
       <changefreq>always</changefreq>
   </url>
   <url>
-      <loc>/categories.html</loc>
+      <loc>http://iwasasuperhero.com/categories.html</loc>
       <lastmod>2012-01-15</lastmod>
       <changefreq>always</changefreq>
   </url>
   <url>
-      <loc>/</loc>
+      <loc>http://iwasasuperhero.com/</loc>
       <lastmod>2012-01-15</lastmod>
   </url>
   <url>
-      <loc>/projects.html</loc>
+      <loc>http://iwasasuperhero.com/projects.html</loc>
       <lastmod>2012-01-15</lastmod>
       <changefreq>monthly</changefreq>
   </url>
   <url>
-      <loc>/tags.html</loc>
+      <loc>http://iwasasuperhero.com/tags.html</loc>
       <lastmod>2012-01-15</lastmod>
       <changefreq>always</changefreq>
   </url>
   <url>
-      <loc>/2012/01/web-browser-frontend-standards-feeds-to-follow</loc>
+      <loc>http://iwasasuperhero.com/2012/01/web-browser-frontend-standards-feeds-to-follow</loc>
       <lastmod>2012-01-15</lastmod>
       <changefreq>never</changefreq>
   </url>
   <url>
-      <loc>/2011/07/espresso-2-openinespresso</loc>
+      <loc>http://iwasasuperhero.com/2011/07/espresso-2-openinespresso</loc>
       <lastmod>2011-07-05</lastmod>
       <changefreq>never</changefreq>
   </url>

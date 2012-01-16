@@ -24,6 +24,7 @@ layout: nil
 		<item>
 			<title>{{ post.title | xml_escape }}</title>
 			<link>http://iwasasuperhero.com{{ post.url }}</link>
+			<guid isPermaLink="true">http://iwasasuperhero.com{{ post.url }}</guid>
 			<comments>http://iwasasuperhero.com{{ post.url }}#disqus_thread</comments>
 			<pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
 			<dc:creator>James FLeeting</dc:creator>

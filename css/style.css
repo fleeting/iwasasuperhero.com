@@ -432,6 +432,40 @@ article img:hover {
 	padding: 0;
 }
 
+/* @group tags */
+
+ul.tag_box {
+	overflow: hidden;
+	margin: 0 0 25px;
+}
+
+.main ul.tag_box li {
+	background: none;
+	background: rgba(180, 180, 180, 0.19);
+	float: left;
+	margin: 0 5px 5px 0;
+	padding: 5px;
+	list-style: none;
+	-webkit-transition: all 0.20s ease-in;
+}
+
+.main ul.tag_box li:hover {
+	-webkit-transform: scale(1.1);
+	-webkit-transition: all 0.20s ease-in;
+}
+
+.csstransitions .main ul.tag_box a:link, .csstransitions .main ul.tag_box a:active, .csstransitions .main ul.tag_box a:visited {
+	text-decoration: none;
+}
+
+.tag_box li span {
+	color: #666;
+	vertical-align: super;
+	font-size: 0.8em;
+}
+
+/* @end */
+
 /* @end */
 
 /* @group sidebar */

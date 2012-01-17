@@ -16,6 +16,10 @@
       <changefreq>always</changefreq>
   </url>
   <url>
+      <loc>http://iwasasuperhero.com/feed/rss.xml</loc>
+      <lastmod>2012-01-15</lastmod>
+  </url>
+  <url>
       <loc>http://iwasasuperhero.com/</loc>
       <lastmod>2012-01-15</lastmod>
   </url>
@@ -30,13 +34,33 @@
       <changefreq>always</changefreq>
   </url>
   <url>
+      <loc>http://iwasasuperhero.com/2012/01/hello-world-again</loc>
+      <lastmod>2012-01-16</lastmod>
+      <changefreq>never</changefreq>
+  </url>
+  <url>
       <loc>http://iwasasuperhero.com/2012/01/web-browser-frontend-standards-feeds-to-follow</loc>
-      <lastmod>2012-01-15</lastmod>
+      <lastmod>2012-01-14</lastmod>
       <changefreq>never</changefreq>
   </url>
   <url>
       <loc>http://iwasasuperhero.com/2011/07/espresso-2-openinespresso</loc>
       <lastmod>2011-07-05</lastmod>
+      <changefreq>never</changefreq>
+  </url>
+  <url>
+      <loc>http://iwasasuperhero.com/2011/04/chrome-developer-tools</loc>
+      <lastmod>2011-04-15</lastmod>
+      <changefreq>never</changefreq>
+  </url>
+  <url>
+      <loc>http://iwasasuperhero.com/2010/06/how-to-display-weather-with-jquery</loc>
+      <lastmod>2010-06-09</lastmod>
+      <changefreq>never</changefreq>
+  </url>
+  <url>
+      <loc>http://iwasasuperhero.com/2010/05/jquery-plugin-simpleweather</loc>
+      <lastmod>2010-05-17</lastmod>
       <changefreq>never</changefreq>
   </url>
 </urlset>

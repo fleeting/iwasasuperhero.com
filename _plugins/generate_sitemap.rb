@@ -55,7 +55,7 @@ module Jekyll
       end
       
       # Write the contents of sitemap.xml.
-      File.open(File.join(site_folder, 'sitemap.xml'), 'w') do |f|
+      File.open(File.join(site_folder, 'sitemap-xml.xml'), 'w') do |f|
         f.write(generate_header())
         f.write(generate_content(site))
         f.write(generate_footer())
@@ -63,7 +63,7 @@ module Jekyll
       end
       
       # Add a static file entry for the zip file, otherwise Site::cleanup will remove it.
-      site.static_files << Jekyll::StaticSitemapFile.new(site, site.dest, '/', 'sitemap.xml')
+      site.static_files << Jekyll::StaticSitemapFile.new(site, site.dest, '/', 'sitemap-xml.xml')
     end
 
     private

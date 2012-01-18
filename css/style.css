@@ -113,6 +113,7 @@ img {
 }
 
 [role="banner"] hgroup {
+	background: #000;
 	float: right;
 }
 
@@ -121,8 +122,6 @@ img {
 	color: #333;
 	text-decoration: none;
 	font: 5.4em "Helvetica Neue", Helvetica, Arial, sans-serif;
-	text-shadow: -1px -1px 0px #fff;
-	filter: dropshadow(color=#fff, offx=-1, offy=-1);
 }
 
 [role="banner"] h1 a:focus {
@@ -132,7 +131,6 @@ img {
 [role="banner"] h1 a:hover {
 	color: #ea44a5;
 	text-shadow: -1px -1px 0px #333;
-	filter: dropshadow(color=#333, offx=-1, offy=-1);
 	text-decoration: none;
 }
 
@@ -190,8 +188,8 @@ nav ul li a:hover, nav ul li.current a {
 	text-align: center;
 	font-size: 3.6em;
 	color: #565656;
-	margin: 35px 0 20px;
-	padding: 0 0 30px;
+	margin: 20px 0;
+	padding: 30px 0;
 	border-bottom: 1px solid #d4d4d4;
 }
 

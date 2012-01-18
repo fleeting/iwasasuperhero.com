@@ -21,7 +21,7 @@ title: Blog
 			<small class="meta"> 
 				<time datetime="{{ post.date }}" title="{{ post.date | date_to_string }}" pubdate>{{ post.date | date_to_string }}</time> 
 				| <a href="{{ post.url }}#disqus_thread"></a>
-				{% if post.short-url != nil %}| <a href="{{ post.short-url }}" title"Short link for {{ post.title }}">{{ post.short-url }}</a>{% endif %}
+				{% if post.short-url != nil %}| <a href="{{ post.short-url }}" title="Short link for {{ post.title }}">{{ post.short-url }}</a>{% endif %}
 				<a href="https://profiles.google.com/113054978318615255520" class="vcard visuallyHidden" rel="author"><span itemprop="author" class="fn">James Fleeting</span></a> 
 			</small>
 		</header>

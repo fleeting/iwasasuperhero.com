@@ -21,7 +21,7 @@
   </url>
   <url>
       <loc>http://iwasasuperhero.com/</loc>
-      <lastmod>2012-01-15</lastmod>
+      <lastmod>2012-01-17</lastmod>
   </url>
   <url>
       <loc>http://iwasasuperhero.com/projects.html</loc>
@@ -32,6 +32,16 @@
       <loc>http://iwasasuperhero.com/tags.html</loc>
       <lastmod>2012-01-15</lastmod>
       <changefreq>always</changefreq>
+  </url>
+  <url>
+      <loc>http://iwasasuperhero.com/2012/01/html5please</loc>
+      <lastmod>2012-01-24</lastmod>
+      <changefreq>never</changefreq>
+  </url>
+  <url>
+      <loc>http://iwasasuperhero.com/2012/01/why-sopa-and-pipa-must-die</loc>
+      <lastmod>2012-01-18</lastmod>
+      <changefreq>never</changefreq>
   </url>
   <url>
       <loc>http://iwasasuperhero.com/2012/01/hello-world-again</loc>

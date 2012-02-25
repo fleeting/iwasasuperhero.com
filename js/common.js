@@ -1,9 +1,12 @@
 $(document).ready(function() {
-	
+	$('a[rel^="colorbox"]').colorbox({
+		maxWidth: '75%',
+		maxHeight: '75%'
+	});
 });
 
 var ADAPT_CONFIG = {
-	path: 'css/',
+	path: '/css/',
 	dynamic: true,
 	range: [
 		'0px to 480px = 480.css',

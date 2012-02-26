@@ -13,7 +13,7 @@ layout: default
 	</header>
 	{% else %}
 	<header>
-		<h2 itemprop="name"><a href="{{ page.url }}" rel="bookmark" title="Permanent Link to {{ page.title }}">{{ page.title }}</a></h2> 
+		<h2 itemprop="name">{{ page.title }}</h2> 
 		<small class="meta"> 
 			<time datetime="{{ page.date }}" title="{{ page.date | date_to_string }}" pubdate>{{ page.date | date_to_string }}</time> 
 			| <a href="{{ page.url }}#disqus_thread"></a>

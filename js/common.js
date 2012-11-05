@@ -3,6 +3,10 @@ $(document).ready(function() {
 		maxWidth: '75%',
 		maxHeight: '75%'
 	});
+
+	var heroSayings = ['Currently traveling at the speed<br />of one second per second.', 'A former masked superhero who now devotes<br />most of his time to the world wide web.'];
+	var index = Math.floor(Math.random() * heroSayings.length);
+	$('.hero p').html(heroSayings[index]);
 });
 
 var ADAPT_CONFIG = {

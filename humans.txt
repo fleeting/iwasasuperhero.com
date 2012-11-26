@@ -12,3 +12,21 @@
   Standards: HTML5, CSS3
   Components: Modernizr, jQuery, Adapt.js, Jekyll-Bootstrap
   Software: Jekyll, GitHub
+
+# The humans responsible & technology colophon
+# humanstxt.org
+
+
+# TEAM
+
+    James Fleeting -- Front-end Developer -- @twofivethreetwo
+
+# THANKS
+
+    H5BP - http://html5boilerplate.com/
+    Jekyll Bootstrap - http://jekyllbootstrap.com/
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    jQuery, Modernizr, Drought, Jekyll

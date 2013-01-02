@@ -34,6 +34,11 @@
       <changefreq>always</changefreq>
   </url>
   <url>
+      <loc>http://iwasasuperhero.com/2013/01/austin-texas</loc>
+      <lastmod>2013-01-02</lastmod>
+      <changefreq>never</changefreq>
+  </url>
+  <url>
       <loc>http://iwasasuperhero.com/2012/11/googles-digital-creativity-guidebook</loc>
       <lastmod>2012-11-27</lastmod>
       <changefreq>never</changefreq>

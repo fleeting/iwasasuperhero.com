@@ -28,7 +28,7 @@ title: Blog
 	{% endif %}
 
 		<div class="post-text" itemprop="articleBody">
-			{{ post.content | replace:'excerpt start -->','' | replace:'<!-- excerpt end','' }}
+			{{ post.content | replace:'excerpt start -->','' | replace:'<!-- excerpt end','' }} {% if post.type != 'linked' %}<p><a href="{{ post.post-link }}" title="{{ post.title }}">Continue reading</a></p>{% endif %}
 		</div>
 
 		{% if post.tags != empty %}

@@ -9,8 +9,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -23,7 +23,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -284,12 +284,12 @@ nav ul li a:hover, nav ul li.current a {
 .main .huge, .main h2 {
 	font-size: 3.0em;
 	padding: 5px 0 10px;
-} 
+}
 
 .main .large, .main h3 {
 	font-size: 2.6em;
 	padding: 5px 0 10px;
-} 
+}
 
 .main .bigger, .main h4 {
 	font-size: 2.2em;
@@ -415,6 +415,12 @@ article img:hover {
 	box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.45);
 }
 
+article img.no-shadow, article img.no-shadow:hover {
+	-webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	-moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+}
+
 .main img.alignleft {
 	float: left;
 	display: inline;
@@ -494,12 +500,12 @@ aside a:hover {
 aside h2 {
 	font-size: 2.3em;
 	padding: 15px 0 10px;
-} 
+}
 
 aside h3 {
 	font-size: 2.0em;
 	padding: 5px 0 8px;
-} 
+}
 
 aside h4 {
 	font-size: 1.7em;
@@ -588,7 +594,7 @@ aside .pin-item p {
 
 aside .pin-description {
 	color: #777;
-	
+
 }
 
 aside .pin-tag {
@@ -623,7 +629,7 @@ article pre {
 	background: #f8f8ff;
 	margin-bottom: 20px;
 	font-family: Monaco, "Courier New", Courier, monospace;
-	-webkit-font-smoothing: subpixel-antialiased;	
+	-webkit-font-smoothing: subpixel-antialiased;
 	overflow: auto;
 	font-size: 1.3em;
 	-moz-border-radius: 0.2em;
@@ -682,7 +688,7 @@ pre .function .keyword, pre .sub .keyword, pre .method, pre .list .title {
 }
 
 pre .string, pre .attribute .value, pre .cdata, pre .filter .argument, pre .attr_selector, pre .apache .cbracket, pre .date, pre .tex .command {
-  color: #e6db63; 
+  color: #e6db63;
   background-color: rgba(0,0,0, 0.1);
 }
 
@@ -845,7 +851,7 @@ footer[role="contentinfo"] a:hover {
 }
 
 /* Hide from browsers & screenreaders, maintain layout */
-.invisible { 
+.invisible {
 	visibility: hidden;
 }
 
@@ -869,8 +875,8 @@ em, i {
 	font-style: italic;
 }
 
-/*pre { 
-  padding: 15px; 
+/*pre {
+  padding: 15px;
   white-space: pre; /* CSS2 *!/
   white-space: pre-wrap; /* CSS 2.1 *!/
   word-wrap: break-word; /* IE *!/

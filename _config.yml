@@ -1,5 +1,5 @@
+name: iwasasuperhero.com
 permalink: /:year/:month/:title
-auto: true
 pygments: true
 var:
   archive_path: /archive.html

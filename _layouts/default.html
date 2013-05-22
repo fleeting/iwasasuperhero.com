@@ -8,58 +8,52 @@
 	<meta name="description" content="Where the thoughts of James Fleeting come to die.">
 	<meta name="google-site-verification" content="IHYjLZD2YWOLxUgpGXIcbJKVYwxdANnI2FTAPwpXBkI">
 	<meta name="viewport" content="width=device-width">
-	<!-- Facebook -->
-	<meta property="og:title" content="iwasasuperhero.com">
-	<meta property="og:description" content="Where the thoughts of James Fleeting come to die.">
-	<meta property="og:image" content="">
-	<!-- /Facebook -->
 
-	<title>{% if page.title == 'Blog' %}The thoughts of James Fleeting{% else %}{{ page.title }}{% endif %} | iwasasuperhero.com</title>
+	<title>{% if page.title == 'Blog' %}The thoughts of James Fleeting{% elsif page.title == 'Home' %}Meet James Fleeting{% else %}{{ page.title }}{% endif %} | iwasasuperhero.com</title>
 
 	<link rel="author" href="/humans.txt">
-	<link rel="dns-prefetch" href="//ajax.googleapis.com">
 	<link rel="sitemap" href="/sitemap.xml" type="application/xml" title="Sitemap">
 	<link rel="alternate" type="application/rss+xml" title="Post Feed" href="http://feeds.feedburner.com/paperkilledrock">
 	<link rel="alternate" type="application/rss+xml" title="Fleeting's Tumblr Feed" href="http://feeds.feedburner.com/FleetingFTW">
 
 	<link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII=">
 
-	<link href='http://fonts.googleapis.com/css?family=IM+Fell+French+Canon&v2' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="/css/foundation.min.css?v=1" type="text/css">
 	<link rel="stylesheet" href="/js/colorbox/colorbox.css?v=1" type="text/css">
 	<link rel="stylesheet" href="/css/style.css?v=011920120803" type="text/css">
-	<link rel="stylesheet" href="/css/syntax.css?v=1" type="text/css">
 
-	<script src="/js/modernizr-2.6.2.min.js"></script>
+	<script src="/js/custom.modernizr.js"></script>
 </head>
 <body{% if page.title == 'Blog' %} class="home"{% endif %}>
 	<i class="frame" id="left-frame"></i>
 	<i class="frame" id="right-frame"></i>
 	<!--[if lt IE 7 ]><p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p><![endif]-->
-	<header role="banner">
-		<hgroup>
-			<h1><a href="/" title="iwasasuperhero.com">iwasasuperhero</a></h1>
-			<h2>James Fleeting: front-end web developer</h2>
-		</hgroup>
 
-		<nav role="navigation">
+	<header role="banner" class="row">
+		<nav role="navigation" class="large-8 columns">
 			<ul>
 				{% for link in site.navigation %}
 					<li{% if page.title == link.text %} class="current"{% endif %}><a href="{{ link.url }}">{{ link.text }}</a></li>
 				{% endfor %}
 			</ul>
 		</nav>
+
+		<div class="large-4 columns">
+			<h1><a href="/" title="iwasasuperhero.com">iwasasuperhero</a></h1>
+			<h2>James Fleeting: front-end web developer</h2>
+		</div>
 	</header>
 
-	<div class="hero">
-		<p></p>
+	<div class="hero large-12 columns">
+		<p>A former masked superhero who now devotes<br>most of his time to the world wide web.</p>
 	</div>
 
-	<div class="main" role="main">
+	<div class="large-8 columns" role="main">
 		{{ content }}
 	</div>
 
-	<aside role="complementary">
-		<ul class="social">
+	<aside role="complementary" class="large-4 columns">
+		<ul class="social inline-list">
 			<li><a href="http://feeds.feedburner.com/paperkilledrock" title="Subscribe to RSS"><img src="/images/icons/rss_32.png" alt="rss feed"></a></li>
 			<li><a href="http://twitter.com/twofivethreetwo" title="@twofivethreetwo on twitter"><img src="/images/icons/twitter_32.png" alt="twitter profile"></a></li>
 			<li><a href="https://plus.google.com/113054978318615255520/" title="Google+ Profile"><img src="/images/icons/googleplus_32.png" alt="google+ profile"></a></li>
@@ -94,15 +88,12 @@
 	</aside>
 
 	<footer role="contentinfo">
-		<p class="left">&copy; Copyright 2012 James Fleeting, iwasasuperhero.com, All Rights Reserved.</p>
+		<p class="left">&copy; Copyright 2013 James Fleeting, iwasasuperhero.com, All Rights Reserved.</p>
 		<p class="right">Check out my <a href="http://jamesfleeting.com" title="James Fleeting">vCard</a> to find me elsewhere.</p>
 	</footer>
 
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="/js/jquery-1.8.3.min.js"><\/script>')</script>
-	<script src="/js/colorbox/jquery.colorbox-min.js"></script>
-	<script src="/js/common.js"></script>
-	<script src="/js/adapt.min.js"></script>
+	<script src="/js/plugins.min.js"></script>
+	<script src="/js/app.min.js"></script>
 
 	<script>
 	(function () {
@@ -111,9 +102,7 @@
 		s.src = 'http://iwasasuperhero.disqus.com/count.js';
 		(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
 	}());
-	</script>
 
-	<script>
 	var _gaq=[['_setAccount','UA-1574394-38'],['_trackPageview']];
 	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
 	g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';

@@ -3,30 +3,67 @@ layout: default
 title: Home
 ---
 
-<h1>HTML Ipsum Presents</h1>
+	<div class="row hero">
+		<div class="large-8 columns">
+			<p>I'm <a href="/about.html" title="About James Fleeting">James Fleeting</a>, a web developer in Austin, Texas. I specialize in front-end development with a passion for HTML, CSS, JavaScript and currently the senior developer at <a href="http://crane-west.com">CRANE | WEST</a>. My obsession for the future of the web pushes me to never stop learning and this blog is where I share that information. You can also find me on <a href="http://twitter.com/twofivethreetwo" title="@twofivethreetwo">twitter</a> where I post mostly what I'm eating in 140 characters. When I'm not working, I can be found playing tabletop games, video games, watching movies, exploring Austin or spending time with my wife and kids.</p>
+		</div>
 
-<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+		<div class="large-3 columns">
+			<ul class="social inline-list">
+				<li><a href="http://feeds.feedburner.com/paperkilledrock" title="Subscribe to RSS"><img src="/images/icons/rss_32.png" alt="rss feed"></a></li>
+				<li><a href="http://twitter.com/twofivethreetwo" title="@twofivethreetwo on twitter"><img src="/images/icons/twitter_32.png" alt="twitter profile"></a></li>
+				<li><a href="https://plus.google.com/113054978318615255520/" title="Google+ Profile"><img src="/images/icons/googleplus_32.png" alt="google+ profile"></a></li>
+				<li><a href="http://instagram.com/fleeting" title="@fleeting on instagram"><img src="/images/icons/instagram_32.png" alt="instagram profile"></a></li>
+				<li><a href="http://github.com/jamesfleeting" title="GitHub Repos"><img src="/images/icons/github_32.png" alt="github profile"></a></li>
+				<li><a href="http://www.linkedin.com/in/fleeting" title="Connect with me on Linkedin"><img src="/images/icons/linkedin_32.png" alt="linkedin profile"></a></li>
+				<li><a href="http://fleetingftw.com/" title="Tumblr Posts"><img src="/images/icons/tumblr_32.png" alt="tumblr blog"></a></li>
+				<li><a href="http://www.flickr.com/photos/twofivethreetwo/" title="twofivethreetwo on flickr"><img src="/images/icons/flickr_32.png" alt="flickr stream"></a></li>
+				<li><a href="http://pinboard.in/u:fleeting" title="Pinboard Bookmarks"><img src="/images/icons/pinboard_32.png" alt="pinboard profile"></a></li>
+				<li><a href="http://www.last.fm/user/freak2532" title="Last.fm Profile"><img src="/images/icons/lastfm_32.png" alt="last.fm profile"></a></li>
+			</ul>
+		</div>
+	</div>
 
-<h2>Header Level 2</h2>
+	<div class="row">
+		<div class="large-7 columns">
+			{% for post in site.posts limit:2 %}
+				{% if post.type == 'linked' %}
+				<article class="post linked-post" role="article">
+					<header>
+						<span title="This post links to an outside website. Clicking the title will result in you visiting said website." class="linked">Linked</span>
+						<h2 itemprop="name"><a href="{{ post.post-link }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+						<small class="meta">
+							<time datetime="{{ post.date }}" title="{{ post.date | date_to_string }}" pubdate>{{ post.date | date_to_string }}</time>
+							| <a href="{{ post.post-link }}" title"{{ post.title }}">{{ post.post-link }}</a>
+						</small>
+					</header>
+				{% else %}
+				<article class="post" role="article">
+					<header>
+						<h2 itemprop="name"><a href="{{ post.url }}" rel="bookmark" title="Permanent Link to {{ post.title }}">{{ post.title }}</a></h2>
+						<small class="meta">
+							<time datetime="{{ post.date }}" title="{{ post.date | date_to_string }}" pubdate>{{ post.date | date_to_string }}</time>
+							| <a href="{{ post.url }}#disqus_thread"></a>
+							{% if post.short-url != nil %}| <a href="{{ post.short-url }}" title="Short link for {{ post.title }}">{{ post.short-url }}</a>{% endif %}
+							<a href="https://profiles.google.com/113054978318615255520" class="vcard visuallyHidden" rel="author"><span itemprop="author" class="fn">James Fleeting</span></a>
+						</small>
+					</header>
+				{% endif %}
 
-<ol>
-   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-   <li>Aliquam tincidunt mauris eu risus.</li>
-</ol>
+					<div class="post-text" itemprop="articleBody">
+						{{ post.excerpt }}
+					</div>
 
-<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
+					{% if post.tags != empty %}
+					<footer>
+						<small class="left">In {% for tag in post.tags %}<a href="{{ site.var.tags_path }}#{{ tag }}-ref" title="Posts tagged with {{ tag }}" rel="tag">{{ tag }}</a>{% if forloop.last %}{% else %}, {% endif %}{% endfor %}</small>
+					</footer>
+					{% endif %}
+				</article>
+			{% endfor %}
+		</div>
 
-<h3>Header Level 3</h3>
-
-<ul>
-   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-   <li>Aliquam tincidunt mauris eu risus.</li>
-</ul>
-
-<pre><code>
-#header h1 a {
-	display: block;
-	width: 300px;
-	height: 80px;
-}
-</code></pre>
+		<div class="large-5 columns">
+			[a few projects]
+		</div>
+	</div>

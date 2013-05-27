@@ -24,14 +24,12 @@
 
 	<script src="/js/custom.modernizr.js"></script>
 </head>
-<body{% if page.title == 'Blog' %} class="home"{% endif %}>
-	<i class="frame" id="left-frame"></i>
-	<i class="frame" id="right-frame"></i>
-	<!--[if lt IE 7 ]><p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p><![endif]-->
+<body{% if page.title == 'Home' %} class="home"{% endif %}>
+	<!--[if lt IE 7 ]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p><![endif]-->
 
 	<header role="banner" class="row">
 		<nav role="navigation" class="large-8 columns">
-			<ul>
+			<ul class="inline-list">
 				{% for link in site.navigation %}
 					<li{% if page.title == link.text %} class="current"{% endif %}><a href="{{ link.url }}">{{ link.text }}</a></li>
 				{% endfor %}
@@ -40,56 +38,59 @@
 
 		<div class="large-4 columns">
 			<h1><a href="/" title="iwasasuperhero.com">iwasasuperhero</a></h1>
-			<h2>James Fleeting: front-end web developer</h2>
 		</div>
 	</header>
 
-	<div class="hero large-12 columns">
-		<p>A former masked superhero who now devotes<br>most of his time to the world wide web.</p>
-	</div>
-
-	<div class="large-8 columns" role="main">
+	{% if page.title == 'Home' %}
 		{{ content }}
-	</div>
+	{% else %}
+		<div class="row">
+			<div class="large-8 columns" role="main">
+				{{ content }}
+			</div>
 
-	<aside role="complementary" class="large-4 columns">
-		<ul class="social inline-list">
-			<li><a href="http://feeds.feedburner.com/paperkilledrock" title="Subscribe to RSS"><img src="/images/icons/rss_32.png" alt="rss feed"></a></li>
-			<li><a href="http://twitter.com/twofivethreetwo" title="@twofivethreetwo on twitter"><img src="/images/icons/twitter_32.png" alt="twitter profile"></a></li>
-			<li><a href="https://plus.google.com/113054978318615255520/" title="Google+ Profile"><img src="/images/icons/googleplus_32.png" alt="google+ profile"></a></li>
-			<li><a href="http://instagram.com/fleeting" title="@fleeting on instagram"><img src="/images/icons/instagram_32.png" alt="instagram profile"></a></li>
-			<li><a href="http://github.com/jamesfleeting" title="GitHub Repos"><img src="/images/icons/github_32.png" alt="github profile"></a></li>
-			<li><a href="http://www.linkedin.com/in/fleeting" title="Connect with me on Linkedin"><img src="/images/icons/linkedin_32.png" alt="linkedin profile"></a></li>
-			<li><a href="http://fleetingftw.com/" title="Tumblr Posts"><img src="/images/icons/tumblr_32.png" alt="tumblr blog"></a></li>
-			<li><a href="http://www.flickr.com/photos/twofivethreetwo/" title="twofivethreetwo on flickr"><img src="/images/icons/flickr_32.png" alt="flickr stream"></a></li>
-			<li><a href="http://pinboard.in/u:fleeting" title="Pinboard Bookmarks"><img src="/images/icons/pinboard_32.png" alt="pinboard profile"></a></li>
-			<li><a href="http://www.last.fm/user/freak2532" title="Last.fm Profile"><img src="/images/icons/lastfm_32.png" alt="last.fm profile"></a></li>
-		</ul>
+			<aside role="complementary" class="large-4 columns">
+				<ul class="social inline-list">
+					<li><a href="http://feeds.feedburner.com/paperkilledrock" title="Subscribe to RSS"><img src="/images/icons/rss_32.png" alt="rss feed"></a></li>
+					<li><a href="http://twitter.com/twofivethreetwo" title="@twofivethreetwo on twitter"><img src="/images/icons/twitter_32.png" alt="twitter profile"></a></li>
+					<li><a href="https://plus.google.com/113054978318615255520/" title="Google+ Profile"><img src="/images/icons/googleplus_32.png" alt="google+ profile"></a></li>
+					<li><a href="http://instagram.com/fleeting" title="@fleeting on instagram"><img src="/images/icons/instagram_32.png" alt="instagram profile"></a></li>
+					<li><a href="http://github.com/jamesfleeting" title="GitHub Repos"><img src="/images/icons/github_32.png" alt="github profile"></a></li>
+					<li><a href="http://www.linkedin.com/in/fleeting" title="Connect with me on Linkedin"><img src="/images/icons/linkedin_32.png" alt="linkedin profile"></a></li>
+					<li><a href="http://fleetingftw.com/" title="Tumblr Posts"><img src="/images/icons/tumblr_32.png" alt="tumblr blog"></a></li>
+					<li><a href="http://www.flickr.com/photos/twofivethreetwo/" title="twofivethreetwo on flickr"><img src="/images/icons/flickr_32.png" alt="flickr stream"></a></li>
+					<li><a href="http://pinboard.in/u:fleeting" title="Pinboard Bookmarks"><img src="/images/icons/pinboard_32.png" alt="pinboard profile"></a></li>
+					<li><a href="http://www.last.fm/user/freak2532" title="Last.fm Profile"><img src="/images/icons/lastfm_32.png" alt="last.fm profile"></a></li>
+				</ul>
 
-		<p>I'm <a href="/about.html" title="About James Fleeting">James Fleeting</a>, a web developer in Austin, Texas. I specialize in front-end development with a passion for HTML, CSS, JavaScript and currently the senior developer at <a href="http://crane-west.com">CRANE | WEST</a>. My obsession for the future of the web pushes me to never stop learning and this blog is where I share that information. You can also find me on <a href="http://twitter.com/twofivethreetwo" title="@twofivethreetwo">twitter</a> where I post mostly what I'm eating in 140 characters. When I'm not working, I can be found playing tabletop games, video games, watching movies, exploring Austin or spending time with my wife and kids.</p>
+				<p>I'm <a href="/about.html" title="About James Fleeting">James Fleeting</a>, a web developer in Austin, Texas. I specialize in front-end development with a passion for HTML, CSS, JavaScript and currently the senior developer at <a href="http://crane-west.com">CRANE | WEST</a>. My obsession for the future of the web pushes me to never stop learning and this blog is where I share that information. You can also find me on <a href="http://twitter.com/twofivethreetwo" title="@twofivethreetwo">twitter</a> where I post mostly what I'm eating in 140 characters. When I'm not working, I can be found playing tabletop games, video games, watching movies, exploring Austin or spending time with my wife and kids.</p>
 
-		<h2>Projects</h2>
-		<ul>
-			<li><a href="http://getdrought.com" title="Drought">Drought</a>: Another boilerplate is exactly what the web needs. There are many, this is mine.</li>
-			<li><a href="http://simpleweather.js/" title="simpleWeather.js">simpleWeather</a>: A simple jQuery plugin to display the current weather information for any location using Yahoo! Weather.</li>
-			<li><a href="https://chrome.google.com/webstore/detail/nmnkdhjpjhggaaicdmafongigfhogcml" title="Last.fm New Releases">Last.fm New Releases</a>: Chrome Extension that displays the new releases from your favorite artists as pulled from last.fm</li>
-			<li><a href="http://simplelastfm.monkeecreate.com/" title="simpleLastFM">simpleLastFM</a>: A jQuery plugin that displays what your listening to, top artists, albums and more from your last.fm profile.</li>
-			<li><a href="https://github.com/fleeting/simpleGitHub" title="simpleGitHub">simpleGitHub</a>: jQuery plugin that lets you create GitHub widgets to display your repos, profile and more.</li>
-			<li><a href="https://github.com/fleeting/vcard" title="vCard">vCard</a>: a simple vCard template.</li>
-			<li><a href="http://sevenpl.us/" title="Seven+">Seven+</a>: A web app for creating and studying your own flash cards.</li>
-			<li><a href="http://threee.monkeecreate.com" title="Threee">Threee</a>: A daily photo project. Three people taking a photo every day with their iPhone.</li>
-			<li><a href="https://github.com/fleeting/dotfiles" title="DotFiles">dotfiles</a>: A repo to store some of my dotfiles.</li>
-			<li>Find more projects on my <a href="https://github.com/fleeting" title="Github">github</a> and at <a href="http://monkeecreate.com/" title="monkeeCreate">monkeeCreate</a>.</li>
-		</ul>
+				<h2>Projects</h2>
+				<ul>
+					<li><a href="http://getdrought.com" title="Drought">Drought</a>: Another boilerplate is exactly what the web needs. There are many, this is mine.</li>
+					<li><a href="http://simpleweather.js/" title="simpleWeather.js">simpleWeather</a>: A simple jQuery plugin to display the current weather information for any location using Yahoo! Weather.</li>
+					<li><a href="https://chrome.google.com/webstore/detail/nmnkdhjpjhggaaicdmafongigfhogcml" title="Last.fm New Releases">Last.fm New Releases</a>: Chrome Extension that displays the new releases from your favorite artists as pulled from last.fm</li>
+					<li><a href="http://simplelastfm.monkeecreate.com/" title="simpleLastFM">simpleLastFM</a>: A jQuery plugin that displays what your listening to, top artists, albums and more from your last.fm profile.</li>
+					<li><a href="https://github.com/fleeting/simpleGitHub" title="simpleGitHub">simpleGitHub</a>: jQuery plugin that lets you create GitHub widgets to display your repos, profile and more.</li>
+					<li><a href="https://github.com/fleeting/vcard" title="vCard">vCard</a>: a simple vCard template.</li>
+					<li><a href="http://sevenpl.us/" title="Seven+">Seven+</a>: A web app for creating and studying your own flash cards.</li>
+					<li><a href="http://threee.monkeecreate.com" title="Threee">Threee</a>: A daily photo project. Three people taking a photo every day with their iPhone.</li>
+					<li><a href="https://github.com/fleeting/dotfiles" title="DotFiles">dotfiles</a>: A repo to store some of my dotfiles.</li>
+					<li>Find more projects on my <a href="https://github.com/fleeting" title="Github">github</a> and at <a href="http://monkeecreate.com/" title="monkeeCreate">monkeeCreate</a>.</li>
+				</ul>
 
-		<h2>Recent Bookmarks</h2>
-		<script language="javascript" src="http://pinboard.in//widgets/v1/linkroll/?user=fleeting&count=4"></script>
-		<p class="right"><a href="http://pinboard.in/u:fleeting" title="fleeting's pinboard">Check out my pinboard!</a></p>
-	</aside>
+				<h2>Recent Bookmarks</h2>
+				<script language="javascript" src="http://pinboard.in//widgets/v1/linkroll/?user=fleeting&count=4"></script>
+				<p class="right"><a href="http://pinboard.in/u:fleeting" title="fleeting's pinboard">Check out my pinboard!</a></p>
+			</aside>
+		</div> <!-- .row -->
+	{% endif %}
 
-	<footer role="contentinfo">
-		<p class="left">&copy; Copyright 2013 James Fleeting, iwasasuperhero.com, All Rights Reserved.</p>
-		<p class="right">Check out my <a href="http://jamesfleeting.com" title="James Fleeting">vCard</a> to find me elsewhere.</p>
+	<footer role="contentinfo" class="row">
+		<div class="large-12 columns">
+			<p class="left">&copy; Copyright 2013 James Fleeting, iwasasuperhero.com, All Rights Reserved.</p>
+			<p class="right">Check out my <a href="http://jamesfleeting.com" title="James Fleeting">vCard</a> to find me elsewhere.</p>
+		</div>
 	</footer>
 
 	<script src="/js/plugins.min.js"></script>

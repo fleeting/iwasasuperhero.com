@@ -1,12 +1,7 @@
 @import "mixins";
 
 /* variables */
-@bgColor: #f1f1f1;
-@fontFamily: "Verdana", sans-serif;
-@fontFamilyAlt: "Palatino", serif;
-@textColor: #333;
-@linkColor: #049cdb;
-@linkColorHover: darken(@linkColor, 15%);
+
 
 /* structure */
 
@@ -17,14 +12,31 @@
 	*behavior: url(/js/boxsizing.htc);
 }
 
-.browsehappy {
-	background: darken(@bgColor, 25%);
-	color: @textColor;
-	margin: 0.2em 0;
-	padding: 0.2em 0;
+html {
+	background: url(/images/582552.png) repeat 0 0;
 }
 
+body {
+	margin: 2.5%;
+}
 
+.browsehappy {
+	margin: 1em 0;
+	padding: 1em;
+	background: #78c0a8;
+
+	a {
+		color: #333;
+		text-decoration: underline;
+	}
+}
+
+.hero {
+	margin-bottom: 35px;
+	padding: 4.0em 0 2.75em;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
 
 /* misc */
 

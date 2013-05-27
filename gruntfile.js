@@ -54,8 +54,8 @@
         }
       },
       watch: {
-        files: ['<%= jshint.files %>'],
-        tasks: ['jshint', 'concat', 'uglify']
+        files: ['<%= jshint.files %>', 'css/style.less'],
+        tasks: ['jshint', 'concat', 'uglify', 'less']
       }
     });
 
@@ -65,6 +65,7 @@
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-devtools');
 
     // Register the default tasks
     grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'less']);

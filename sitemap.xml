@@ -34,6 +34,11 @@
       <changefreq>always</changefreq>
   </url>
   <url>
+      <loc>http://iwasasuperhero.com/2013/05/grunt-devtools</loc>
+      <lastmod>2013-05-26</lastmod>
+      <changefreq>never</changefreq>
+  </url>
+  <url>
       <loc>http://iwasasuperhero.com/2013/05/simpleweatherjs-v2-2-0</loc>
       <lastmod>2013-05-03</lastmod>
       <changefreq>never</changefreq>

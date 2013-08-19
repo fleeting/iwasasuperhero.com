@@ -34,6 +34,11 @@
       <changefreq>always</changefreq>
   </url>
   <url>
+      <loc>http://iwasasuperhero.com/2013/08/thanks-for-all-the-fish</loc>
+      <lastmod>2013-08-19</lastmod>
+      <changefreq>never</changefreq>
+  </url>
+  <url>
       <loc>http://iwasasuperhero.com/2013/08/sublime-packages</loc>
       <lastmod>2013-08-01</lastmod>
       <changefreq>never</changefreq>

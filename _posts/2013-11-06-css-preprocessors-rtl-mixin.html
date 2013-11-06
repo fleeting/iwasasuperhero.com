@@ -1,0 +1,35 @@
+---
+layout: post
+title: CSS Preprocessors RTL Mixin
+type: linked
+post-link: http://davidwalsh.name/stylus-parent-selectors
+tags: [CSS, SASS, Development, Linked]
+---
+
+<p>A brilliant mixin from <a herf="http://davidwalsh.name/stylus-parent-selectors">David Walsh</a> to let you quickly manage properties for RTL support. Works in Stylus, LESS, and SASS. Beyond RTL support he shows how the same pattern can be for featured-based classes. Awesome! His example is in Stylus but I did a quick SASS version below.</p>
+
+<div data-height="600" data-theme-id="0" data-slug-hash="AqHtu" data-user="fleeting" data-default-tab="css" class='codepen'><pre><code>&#x2F;* Original using Stylus by David Walsh http:&#x2F;&#x2F;davidwalsh.name&#x2F;stylus-parent-selectors *&#x2F;
+
+&#x2F;* mixin definition ; sets LTR and RTL within the same style call *&#x2F;
+@mixin bidi-style($prop, $value, $inverse-prop, $default-value) {
+  #{$prop}: $value;
+
+  html[dir=rtl] &amp; {
+    #{$inverse-prop}: $value;
+    #{$prop}: $default-value;
+  }
+}
+
+
+&#x2F;* usage *&#x2F;
+.some {
+  .thing {
+    &gt; .is {
+      .here {
+        @include bidi-style(margin-left, 20px, margin-right, 0); &#x2F;* setting LRT and RTL! *&#x2F;
+      }
+    }
+  }
+}</code></pre>
+<p>See the Pen <a href='http://codepen.io/fleeting/pen/AqHtu'>%= penName %></a> by James Fleeting (<a href='http://codepen.io/fleeting'>@fleeting</a>) on <a href='http://codepen.io'>CodePen</a></p>
+</div><script async src="//codepen.io/assets/embed/ei.js"></script>

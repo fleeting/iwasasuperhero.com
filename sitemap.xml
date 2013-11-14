@@ -34,6 +34,11 @@
       <changefreq>always</changefreq>
   </url>
   <url>
+      <loc>http://iwasasuperhero.com/2013/11/html-imports</loc>
+      <lastmod>2013-11-14</lastmod>
+      <changefreq>never</changefreq>
+  </url>
+  <url>
       <loc>http://iwasasuperhero.com/2013/11/css-preprocessors-rtl-mixin</loc>
       <lastmod>2013-11-06</lastmod>
       <changefreq>never</changefreq>

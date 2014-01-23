@@ -34,6 +34,11 @@
       <changefreq>always</changefreq>
   </url>
   <url>
+      <loc>http://iwasasuperhero.com/2014/01/simpleweather-v2dot4</loc>
+      <lastmod>2014-01-23</lastmod>
+      <changefreq>never</changefreq>
+  </url>
+  <url>
       <loc>http://iwasasuperhero.com/2013/12/year-in-review-2013</loc>
       <lastmod>2013-12-31</lastmod>
       <changefreq>never</changefreq>

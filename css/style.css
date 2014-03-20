@@ -4025,18 +4025,220 @@ th.hide-for-touch {
   max-width: 100%;
 }
 
+.wrap {
+  position: relative;
+  width: 100%;
+}
+
 /* header */
 [role="banner"] {
   height: 35%;
+  min-height: 245px;
   background: url(http://farm8.staticflickr.com/7033/6732960045_cd855ae430_o.jpg) no-repeat center center;
   background-size: cover;
 }
 [role="banner"] h1 {
   text-align: center;
-  margin: 0;
-  background: rgba(0, 0, 0, 0.5);
+  margin: 0 0 0 4rem;
+  background: rgba(0, 0, 0, 0.4);
   color: #f1f1f1;
   width: 315px;
+}
+[role="banner"] .toggle-sidebar {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: block;
+  width: 2.2rem;
+  padding: .6rem .65rem;
+  color: #505050;
+  background-color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: fixed;
+  width: 2.25rem;
+}
+[role="banner"] .toggle-sidebar:before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-bottom: .15rem;
+  border-top-width: .45rem;
+  border-bottom-width: .15rem;
+  border-top: .375rem double;
+  border-bottom: .125rem solid;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*
+ * Sidebar
+ *
+ * The sidebar is the drawer, the item we are toggling with our handy hamburger
+ * button in the corner of the page.
+ *
+ * This particular sidebar implementation was inspired by Chris Coyier's
+ * "Offcanvas Menu with CSS Target" article, and the checkbox variation from the
+ * comments by a reader. It modifies both implementations to continue using the
+ * checkbox (no change in URL means no polluted browser history), but this uses
+ * `position` for the menu to avoid some potential content reflow issues.
+ *
+ * Source: http://css-tricks.com/off-canvas-menu-with-css-target/#comment-207504
+ */
+/* Style and "hide" the sidebar */
+.menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -14rem;
+  width: 14rem;
+  visibility: hidden;
+  overflow-y: auto;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-size: .875rem;
+  /* 15px */
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #202020;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+@media (min-width: 30rem) {
+  .menu {
+    font-size: .75rem;
+    /* 14px */
+  }
+}
+/* Sidebar content */
+.menu a {
+  font-weight: normal;
+  color: #fff;
+}
+
+.menu-item {
+  padding: 1rem;
+}
+
+.menu-item p:last-child {
+  margin-bottom: 0;
+}
+
+/* Sidebar nav */
+.menu-nav {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu-nav-item {
+  display: block;
+  padding: .5rem 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu-nav-item.active,
+a.menu-nav-item:hover,
+a.menu-nav-item:focus {
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: transparent;
+}
+
+@media (min-width: 48rem) {
+  .menu-item {
+    padding: 1.5rem;
+  }
+
+  .menu-nav-item {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+/* Hide the sidebar checkbox that we toggle with `.sidebar-toggle` */
+.menu-checkbox {
+  display: none;
+}
+
+/* Style the `label` that we use to target the `.sidebar-checkbox` */
+.menu-toggle {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: block;
+  width: 2.2rem;
+  padding: .5rem .65rem;
+  color: #505050;
+  background-color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.menu-toggle:before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-bottom: .125rem;
+  border-top: .375rem double;
+  border-bottom: .125rem solid;
+  /* Make the border inside the box */
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.menu-toggle:active,
+#menu-checkbox:checked ~ .menu-toggle {
+  color: #fff;
+  background-color: #505050;
+}
+
+@media (min-width: 30.1rem) {
+  .menu-toggle {
+    position: fixed;
+    width: 2.25rem;
+  }
+
+  .menu-toggle:before {
+    padding-bottom: .15rem;
+    border-top-width: .45rem;
+    border-bottom-width: .15rem;
+  }
+}
+/* Slide effect
+ *
+ * Handle the sliding effects of the sidebar and content in one spot, seperate
+ * from the default styles.
+ *
+ * As an a heads up, we don't use `transform: translate3d()` here because when
+ * mixed with `position: fixed;` for the sidebar toggle, it creates a new
+ * containing block. Put simply, the fixed sidebar toggle behaves like
+ * `position: absolute;` when transformed.
+ *
+ * Read more about it at http://meyerweb.com/eric/thoughts/2011/09/12/.
+ */
+.wrap, .menu, .menu-toggle {
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.wrap, .menu-toggle {
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+}
+
+#menu-checkbox:checked + .menu {
+  visibility: visible;
+}
+
+#menu-checkbox:checked ~ .menu, #menu-checkbox:checked ~ .wrap, #menu-checkbox:checked ~ .menu-toggle {
+  -webkit-transform: translateX(14rem);
+  -ms-transform: translateX(14rem);
+  transform: translateX(14rem);
 }
 
 /* main */

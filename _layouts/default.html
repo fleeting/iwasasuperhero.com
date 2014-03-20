@@ -19,42 +19,54 @@
 	<script src="/js/modernizr.js"></script>
 </head>
 <body>
-  <header role="banner" class="row full-width">
-    <div class="large-12 columns">
-      <h1>iwasasuperhero</h1>
-    </div>
-  </header>
+  <!-- Target for toggling the sidebar `.menu-checkbox` is for regular
+     styles, `#menu-checkbox` for behavior. -->
+	<input type="checkbox" class="menu-checkbox" id="menu-checkbox">
 
-  <div class="row">
-		<div role="main" class="large-8 columns">
-    	{{ content }}
-		</div>
+	<!-- Toggleable sidebar -->
+	<div class="menu" id="menu">
+	  <div class="menu-item">
 
-		<div role="complementary" class="large-4 columns">
-			<div class="row">
-				<div class="large-12 columns">
-					<p style="line-height: 1.4; font-size: 0.8em;"><img src="/images/avatar.jpg" style="width: 80px; border-radius: 150px;max-width: 100px;min-width: 50px;float: left;margin: 6px 10px 0 0;">I'm <a href="/about.html" title="About James Fleeting">James Fleeting</a>, a web developer in Austin, Texas. I specialize in front-end development with a passion for HTML, CSS, JavaScript and currently the Sr. Front End Developer at <a href="http://monkee-boy.com">Monkee Boy</a>. My obsession for the future of the web pushes me to never stop learning and this blog is where I share that information. You can also find me on <a href="http://twitter.com/fleetingftw" title="@fleetingftw">twitter</a> where I post mostly what I'm eating in 140 characters. When I'm not working, I can be found playing tabletop games, video games, watching movies, exploring Austin or spending time with my wife and kids.</p>
-				</div>
+	  </div>
+
+	  <nav class="menu-nav">
+			<a class="menu-nav-item{% if page.title == "Home" %} active{% endif %}" href="/">Blog</a>
+	    <a class="menu-nav-item{% if page.title == "About" %} active{% endif %}" href="/about.html">About</a>
+			<a class="menu-nav-item{% if page.title == "Currently" %} active{% endif %}" href="/currently.html">Currently</a>
+			<a class="menu-nav-item{% if page.title == "Projects" %} active{% endif %}" href="/projects.html">Projects</a>
+			<a class="menu-nav-item{% if page.title == "Archive" %} active{% endif %}" href="/archive.html">Archive</a>
+	  </nav>
+	</div>
+
+	<div class="wrap">
+	  <header role="banner" class="row full-width">
+	    <div class="large-12 columns">
+				<label for="menu-checkbox" class="menu-toggle"></label>
+
+	      <h1>iwasasuperhero</h1>
+	    </div>
+	  </header>
+
+	  <div class="row">
+			<div role="main" class="large-8 columns">
+	    	{{ content }}
 			</div>
 
-			<div class="row">
-				<div class="large-12 columns">
-					<ul class="navigation">
-						<li class="current"><a href="/">Blog</a></li>
-						<li><a href="/about.html">About</a></li>
-						<li><a href="/projects.html">Projects</a></li>
-						<li><a href="/archive.html">Archive</a></li>
-					</ul>
+			<div role="complementary" class="large-4 columns">
+				<div class="row">
+					<div class="large-12 columns">
+						<p style="line-height: 1.4; font-size: 0.8em;"><img src="/images/avatar.jpg" style="width: 80px; border-radius: 150px;max-width: 100px;min-width: 50px;float: left;margin: 6px 10px 0 0;">I'm <a href="/about.html" title="About James Fleeting">James Fleeting</a>, a web developer in Austin, Texas. I specialize in front-end development with a passion for HTML, CSS, JavaScript and currently the Sr. Front End Developer at <a href="http://monkee-boy.com">Monkee Boy</a>. My obsession for the future of the web pushes me to never stop learning and this blog is where I share that information. You can also find me on <a href="http://twitter.com/fleetingftw" title="@fleetingftw">twitter</a> where I post mostly what I'm eating in 140 characters. When I'm not working, I can be found playing tabletop games, video games, watching movies, exploring Austin or spending time with my wife and kids.</p>
+					</div>
 				</div>
 			</div>
-		</div>
-  </div>
+	  </div>
 
-  <footer class="row">
-    <div class="large-12 columns">
-      &copy; James Fleeting, iwasasuperhero.com, @fleetingftw.
-    </div>
-  </footer>
+	  <footer class="row">
+	    <div class="large-12 columns">
+	      &copy; James Fleeting, iwasasuperhero.com, @fleetingftw.
+	    </div>
+	  </footer>
+	</div> <!-- .wrap -->
 
 	<script src="/js/app.min.js"></script>
 	<script>

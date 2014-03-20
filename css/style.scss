@@ -28,41 +28,6 @@
     color: #f1f1f1;
     width: 315px;
   }
-
-  .toggle-sidebar {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    display: block;
-    width: 2.2rem;
-    padding: .6rem .65rem;
-    color: #505050;
-    background-color: #fff;
-    border-radius: 4px;
-    cursor: pointer;
-    -webkit-transition: -webkit-transform .3s ease-in-out;
-    transition: transform .3s ease-in-out;
-    -webkit-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    backface-visibility: hidden;
-
-    position: fixed;
-    width: 2.25rem;
-
-    &:before {
-      display: block;
-      content: "";
-      width: 100%;
-      padding-bottom: .15rem;
-      border-top-width: .45rem;
-      border-bottom-width: .15rem;
-      border-top: .375rem double;
-      border-bottom: .125rem solid;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-    }
-  }
 }
 
 
@@ -90,21 +55,16 @@
   width: 14rem;
   visibility: hidden;
   overflow-y: auto;
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
-  font-size: .875rem; /* 15px */
+  font-size: .75rem; /* 14px */
   color: rgba(255,255,255,.6);
-  background-color: #202020;
+  background-color: #007095;
   -webkit-transition: all .3s ease-in-out;
           transition: all .3s ease-in-out;
-}
-@media (min-width: 30rem) {
-  .menu {
-    font-size: .75rem; /* 14px */
-  }
 }
 
 /* Sidebar content */
 .menu a {
+  font-size: 1.3em;
   font-weight: normal;
   color: #fff;
 }
@@ -149,12 +109,12 @@ a.menu-nav-item:focus {
 
 /* Style the `label` that we use to target the `.sidebar-checkbox` */
 .menu-toggle {
-  position: absolute;
+  position: fixed;
   top:  1rem;
   left: 1rem;
   display: block;
-  width: 2.2rem;
-  padding: .5rem .65rem;
+  width: 2.25rem;
+  padding: .6rem .65rem;
   color: #505050;
   background-color: #fff;
   border-radius: 4px;
@@ -164,7 +124,9 @@ a.menu-nav-item:focus {
   display: block;
   content: "";
   width: 100%;
-  padding-bottom: .125rem;
+  padding-bottom: .15rem;
+  border-top-width: .40rem;
+  border-bottom-width: .15rem;
   border-top: .375rem double;
   border-bottom: .125rem solid;
 
@@ -178,18 +140,6 @@ a.menu-nav-item:focus {
 #menu-checkbox:checked ~ .menu-toggle {
   color: #fff;
   background-color: #505050;
-}
-
-@media (min-width: 30.1rem) {
-  .menu-toggle {
-    position: fixed;
-    width: 2.25rem;
-  }
-  .menu-toggle:before {
-    padding-bottom: .15rem;
-    border-top-width: .45rem;
-    border-bottom-width: .15rem;
-  }
 }
 
 /* Slide effect
@@ -244,7 +194,11 @@ article {
       color: #fff;
       font-size: 0.8em;
       text-transform: uppercase;
-      background: #007095;
+      background: #ea44a5;
+    }
+
+    a {
+      color: #ea44a5;
     }
 
     a:after {
@@ -284,6 +238,21 @@ article {
     clear: both;
     text-align: right;
   }
+
+  .article-content {
+    a {
+      color: #ea44a5;
+    }
+
+    a:hover {
+      color: shade(#ea44a5, 10%);
+      text-decoration: underline;
+    }
+
+    a.button {
+      color: #fff;
+    }
+  }
 }
 
 /* left sidebar */
@@ -321,7 +290,6 @@ article {
 }
 
 /* misc */
-
 .pull-left {
   float: left;
 }

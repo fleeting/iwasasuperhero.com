@@ -1,15 +1,23 @@
-permalink: /:year/:month/:title
-pygments: true
-var:
-  archive_path: /archive.html
-  categories_path : /categories.html
-  tags_path : /tags.html
-navigation:
-- text: Blog
-  url: /
-- text: About
-  url: /about.html
-- text: Projects
-  url: /projects.html
-- text: Archive
-  url: /archive.html
+# Dependencies
+markdown:         redcarpet
+pygments:         true
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            iwasasuperhero
+url:              http://iwasasuperhero.com
+
+author:
+  name:           'James Fleeting'
+  url:            https://twitter.com/fleetingftw
+  email:          hello@jamesfleeting.com
+
+paginate:         4
+
+# Custom vars
+version:          1.0.0
+
+github:
+  repo:           https://github.com/fleeting/iwasasuperhero.com

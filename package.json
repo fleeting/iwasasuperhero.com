@@ -1,0 +1,16 @@
+{
+  "name": "iwash",
+  "version": "2.0.0",
+  "private": true,
+  "dependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-sass": "latest",
+    "grunt-contrib-imagemin": "latest",
+    "grunt-notify": "latest",
+    "grunt-devtools": "latest"
+  }
+}

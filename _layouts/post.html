@@ -1,49 +1,9 @@
 ---
 layout: default
 ---
+<h2>{{ page.title }}</h2>
+<p class="meta">{{ page.date | date_to_string }}</p>
 
-<article class="post" role="article" itemscope itemtype="http://schema.org/BlogPosting">
-	{% if page.type == "linked" %}
-	<header>
-		<span title="This post links to an outside website. Clicking the title will result in you visiting said website." class="linked">Linked</span>
-		<h2 itemprop="name"><a href="{{ page.post-link }}" title="{{ page.title }}">{{ page.title }}</a></h2> 
-		<small class="meta"> 
-			<time datetime="{{ page.date }}" title="{{ page.date | date_to_string }}" pubdate>{{ page.date | date_to_string }}</time> 
-		</small>
-	</header>
-	{% else %}
-	<header>
-		<h2 itemprop="name">{{ page.title }}</h2> 
-		<small class="meta"> 
-			<time datetime="{{ page.date }}" title="{{ page.date | date_to_string }}" pubdate>{{ page.date | date_to_string }}</time> 
-			| <a href="{{ page.url }}#disqus_thread"></a>
-			{% if page.short-url != nil %}| <a href="{{ page.short-url }}" title="Short link for {{ page.title }}">{{ page.short-url }}</a>{% endif %}
-			<a href="https://profiles.google.com/113054978318615255520" class="vcard visuallyHidden" rel="author"><span itemprop="author" class="fn">James Fleeting</span></a> 
-		</small>
-	</header>
-	{% endif %}
-	
-	<div class="post-text" itemprop="articleBody">
-		{{ content }}
-	</div>
-	
-	{% if page.tags != empty %}
-	<footer>
-		<small class="left">In {% for tag in page.tags %}<a href="{{ site.var.tags_path }}#{{ tag }}-ref" title="Posts tagged with {{ tag }}" rel="tag">{{ tag }}</a>{% if forloop.last %}{% else %}, {% endif %}{% endfor %}</small>
-		<small class="right"><a href="#comments">Leave a Comment</a></small>
-	</footer>
-	{% endif %}
-</article>
-
-{% if page.type != "linked" %}
-<div id="disqus_thread"></div>
-<script>
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://iwasasuperhero.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-{% endif %}
+<div class="post">
+{{ content }}
+</div>

@@ -4,14 +4,13 @@
 
 # TEAM
 
-    James Fleeting -- Front-end Developer -- @fleetingftw
+    James Fleeting -- @fleetingftw
 
 # THANKS
 
     H5BP - http://html5boilerplate.com/
-    Jekyll Bootstrap - http://jekyllbootstrap.com/
 
 # TECHNOLOGY COLOPHON
 
-    HTML5, CSS3
-    jQuery, Modernizr, Drought, Jekyll
+    HTML5, CSS3, Jekyll, Foundation
+    jQuery, Modernizr, Drought

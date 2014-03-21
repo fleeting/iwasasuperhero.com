@@ -4064,8 +4064,8 @@ th.hide-for-touch {
   position: fixed;
   top: 0;
   bottom: 0;
-  left: -14rem;
-  width: 14rem;
+  left: -17rem;
+  width: 17rem;
   visibility: hidden;
   overflow-y: auto;
   font-size: .75rem;
@@ -4084,7 +4084,7 @@ th.hide-for-touch {
 }
 
 .menu-item {
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
 .menu-item p:last-child {
@@ -4098,7 +4098,7 @@ th.hide-for-touch {
 
 .menu-nav-item {
   display: block;
-  padding: .5rem 1rem;
+  padding: .5rem 1.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -4110,16 +4110,6 @@ a.menu-nav-item:focus {
   border-color: transparent;
 }
 
-@media (min-width: 48rem) {
-  .menu-item {
-    padding: 1.5rem;
-  }
-
-  .menu-nav-item {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
 /* Hide the sidebar checkbox that we toggle with `.sidebar-toggle` */
 .menu-checkbox {
   display: none;
@@ -4188,9 +4178,9 @@ a.menu-nav-item:focus {
 }
 
 #menu-checkbox:checked ~ .menu, #menu-checkbox:checked ~ .wrap, #menu-checkbox:checked ~ .menu-toggle {
-  -webkit-transform: translateX(14rem);
-  -ms-transform: translateX(14rem);
-  transform: translateX(14rem);
+  -webkit-transform: translateX(17rem);
+  -ms-transform: translateX(17rem);
+  transform: translateX(17rem);
 }
 
 /* main */
@@ -4232,6 +4222,12 @@ article .meta-linked a:after {
   background-image: -o-linear-gradient(right, white, rgba(255, 255, 255, 0));
   background-image: linear-gradient(right, white, rgba(255, 255, 255, 0));
 }
+article .meta-readingtime {
+  margin: 0;
+  text-align: right;
+  font-size: 0.9em;
+  color: #666;
+}
 article time {
   background: #ea44a5;
   text-align: right;
@@ -4262,20 +4258,57 @@ article .article-content a.button {
 [role="complementary"] {
   padding-top: 35px;
 }
-[role="complementary"] .navigation {
-  margin: 0;
+[role="complementary"] .avatar {
+  width: 80px;
+  border-radius: 150px;
+  max-width: 100px;
+  min-width: 50px;
+  float: left;
+  margin: 6px 10px 0 0;
+}
+[role="complementary"] p, [role="complementary"] ul, [role="complementary"] ol {
+  font-size: 0.8em;
+  line-height: 1.4;
+}
+[role="complementary"] h2 {
+  display: inline-block;
+  float: right;
+  padding: 4px 6px;
+  color: #fff;
+  font-size: 1em;
+  background: #007095;
+}
+[role="complementary"] .aside-section {
+  clear: both;
+}
+[role="complementary"] .social {
+  margin: 0 auto 25px;
+  width: 176px;
+}
+[role="complementary"] .social li {
   list-style: none;
+  display: inline-block;
 }
-[role="complementary"] .navigation a {
-  display: block;
-  padding: 8px 10px;
-  border-top: 1px solid #f1f1f1;
+[role="complementary"] .pin-item {
+  background: none;
+  background: rgba(234, 68, 165, 0.07);
+  margin: 0 0 5px;
+  padding: 10px;
+  opacity: 0.6;
+  -webkit-transition: all 0.20s ease-in;
 }
-[role="complementary"] .navigation a:hover {
-  background: #f1f1f1;
+[role="complementary"] .pin-item:hover {
+  opacity: 1;
+  -webkit-transition: all 0.20s ease-in;
 }
-[role="complementary"] .navigation li:first-child a {
-  border-top: 0;
+[role="complementary"] .pin-item p {
+  margin-bottom: 0;
+}
+[role="complementary"] .pin-description {
+  color: #777;
+}
+[role="complementary"] .pin-tag {
+  display: none;
 }
 
 /* right sidebar */

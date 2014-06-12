@@ -53,6 +53,7 @@ table {
 html {
 	background: #fff url(../images/body-bg.jpg) repeat top center;
 	overflow-y: scroll;
+	position: relative;
 }
 
 body {

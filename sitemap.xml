@@ -34,6 +34,11 @@
       <changefreq>always</changefreq>
   </url>
   <url>
+      <loc>http://iwasasuperhero.com/2014/06/google-web-starter-kit</loc>
+      <lastmod>2014-06-20</lastmod>
+      <changefreq>never</changefreq>
+  </url>
+  <url>
       <loc>http://iwasasuperhero.com/2014/05/simpleweather-v3-and-the-future</loc>
       <lastmod>2014-05-19</lastmod>
       <changefreq>never</changefreq>

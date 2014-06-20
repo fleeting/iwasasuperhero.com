@@ -1,5 +1,5 @@
 permalink: /:year/:month/:title
-pygments: true
+highlighter: pygments
 var:
   archive_path: /archive.html
   categories_path : /categories.html

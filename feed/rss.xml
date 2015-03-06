@@ -1,5 +1,5 @@
 ---
-layout: nil
+layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"
@@ -19,7 +19,7 @@ layout: nil
 		<language>en</language>
 		<sy:updatePeriod>hourly</sy:updatePeriod>
 		<sy:updateFrequency>1</sy:updateFrequency>
-	
+
 		{% for post in site.posts limit:20 %}
 		<item>
 			<title>{{ post.title | xml_escape }}</title>

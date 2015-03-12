@@ -2,7 +2,7 @@
 layout: post
 title: Monkee-Boy Gets a New Site
 tags: [Monkee-Boy, Development, Linked]
-short-url: http://goo.gl/M35936
+short-url: http://goo.gl/C5iXnQ
 ---
 [<img src="https://camo.githubusercontent.com/aa6b74baf409dc1071d32363ae1186914ac6d3a4/687474703a2f2f7777772e6d6f6e6b65652d626f792e636f6d2f696d672f6c6f676f2d776974687461672d766572746963616c2d6461726b2e6a7067" alt="Monkee-Boy" class="no-shadow">](https://monkee-boy.com)
 

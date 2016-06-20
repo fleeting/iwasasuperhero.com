@@ -1,8 +1,5 @@
-_site/*
-_drafts/
-
-Thumbs.db
-.DS_Store
-
 !.gitkeep
 node_modules/
+config.js
+content/data/ghost-dev.db
+content/data/ghost.db

@@ -1,5 +1,5 @@
 !.gitkeep
 node_modules/
 config.js
-content/data/ghost-dev.db
-content/data/ghost.db
+content/data/
+content/images/

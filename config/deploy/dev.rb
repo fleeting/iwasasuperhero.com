@@ -15,6 +15,6 @@ role :web, %w{monkee@104.237.135.230}
 
 server '104.237.135.230', user: 'monkee', roles: %w{web}
 
-set :deploy_to, '/var/www/monkeecreate.com/iwasasuperhero'
+set :deploy_to, '/var/www/monkeecreate.com/dev.iwasasuperhero'
 set :deploy_env, 'dev'
 set :branch, 'convert-to-ghost'

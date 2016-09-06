@@ -1,15 +1,14 @@
-var _        = require('lodash'),
-    cheerio  = require('cheerio'),
-    crypto   = require('crypto'),
-    downsize = require('downsize'),
-    RSS      = require('rss'),
-    url      = require('url'),
-    config   = require('../../../config'),
-    errors   = require('../../../errors'),
-    filters  = require('../../../filters'),
+var _           = require('lodash'),
+    crypto      = require('crypto'),
+    downsize    = require('downsize'),
+    RSS         = require('rss'),
+    config      = require('../../../config'),
+    errors      = require('../../../errors'),
+    filters     = require('../../../filters'),
+    processUrls = require('../../../utils/make-absolute-urls'),
 
     // Really ugly temporary hack for location of things
-    fetchData = require('../../../controllers/frontend/fetch-data'),
+    fetchData   = require('../../../controllers/frontend/fetch-data'),
 
     generate,
     generateFeed,
@@ -65,48 +64,6 @@ function getBaseUrl(req, slugParam) {
     return baseUrl;
 }
 
-function processUrls(html, siteUrl, itemUrl) {
-    var htmlContent = cheerio.load(html, {decodeEntities: false});
-    // convert relative resource urls to absolute
-    ['href', 'src'].forEach(function forEach(attributeName) {
-        htmlContent('[' + attributeName + ']').each(function each(ix, el) {
-            var baseUrl,
-                attributeValue,
-                parsed;
-
-            el = htmlContent(el);
-
-            attributeValue = el.attr(attributeName);
-
-            // if URL is absolute move on to the next element
-            try {
-                parsed = url.parse(attributeValue);
-
-                if (parsed.protocol) {
-                    return;
-                }
-
-                // Do not convert protocol relative URLs
-                if (attributeValue.lastIndexOf('//', 0) === 0) {
-                    return;
-                }
-            } catch (e) {
-                return;
-            }
-
-            // compose an absolute URL
-
-            // if the relative URL begins with a '/' use the blog URL (including sub-directory)
-            // as the base URL, otherwise use the post's URL.
-            baseUrl = attributeValue[0] === '/' ? siteUrl : itemUrl;
-            attributeValue = config.urlJoin(baseUrl, attributeValue);
-            el.attr(attributeName, attributeValue);
-        });
-    });
-
-    return htmlContent;
-}
-
 getFeedXml = function getFeedXml(path, data) {
     var dataHash = crypto.createHash('md5').update(JSON.stringify(data)).digest('hex');
     if (!feedCache[path] || feedCache[path].hash !== dataHash) {
@@ -143,7 +100,7 @@ generateFeed = function generateFeed(data) {
                 guid: post.uuid,
                 url: itemUrl,
                 date: post.published_at,
-                categories: _.pluck(post.tags, 'name'),
+                categories: _.map(post.tags, 'name'),
                 author: post.author ? post.author.name : null,
                 custom_elements: []
             },
